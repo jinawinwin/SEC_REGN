@@ -37,7 +37,7 @@
       "ticker": "BMY",
       "name": "Bristol Myers Squibb",
       "cik": "0000014272",
-      "name_match": "bristol myers squibb",
+      "name_match": "bristol-myers squibb",
       "region": "US",
       "rationale": "Oncology, immunology and innovative medicines"
     },
@@ -68,7 +68,7 @@
     {
       "ticker": "BIIB",
       "name": "Biogen",
-      "cik": "0000875047",
+      "cik": "0000875045",
       "name_match": "biogen",
       "region": "US",
       "rationale": "Specialty biotechnology focused on neuroscience and rare disease"
