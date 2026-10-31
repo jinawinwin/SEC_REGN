@@ -1,0 +1,85 @@
+{
+  "_comment": "US-listed biopharma peer set for Regeneron. name_match must appear in SEC companyfacts entityName.",
+  "peers": [
+    {
+      "ticker": "AMGN",
+      "name": "Amgen",
+      "cik": "0000318154",
+      "name_match": "amgen",
+      "region": "US",
+      "rationale": "Large-cap biotechnology; biologics, oncology and inflammation"
+    },
+    {
+      "ticker": "GILD",
+      "name": "Gilead Sciences",
+      "cik": "0000882095",
+      "name_match": "gilead sciences",
+      "region": "US",
+      "rationale": "Antiviral franchises, oncology and cell therapy"
+    },
+    {
+      "ticker": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "cik": "0000875320",
+      "name_match": "vertex",
+      "region": "US",
+      "rationale": "Specialty biotech with commercial products and pipeline expansion"
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "cik": "0001551152",
+      "name_match": "abbvie",
+      "region": "US",
+      "rationale": "Immunology, oncology and large-scale pharmaceutical R&D"
+    },
+    {
+      "ticker": "BMY",
+      "name": "Bristol Myers Squibb",
+      "cik": "0000014272",
+      "name_match": "bristol myers squibb",
+      "region": "US",
+      "rationale": "Oncology, immunology and innovative medicines"
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "cik": "0000059478",
+      "name_match": "eli lilly",
+      "region": "US",
+      "rationale": "Biopharma growth benchmark in cardiometabolic and oncology medicines"
+    },
+    {
+      "ticker": "MRK",
+      "name": "Merck & Co.",
+      "cik": "0000310158",
+      "name_match": "merck",
+      "region": "US",
+      "rationale": "Large-cap pharmaceutical company with oncology and vaccine franchises"
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "cik": "0000078003",
+      "name_match": "pfizer",
+      "region": "US",
+      "rationale": "Global pharmaceutical scale, vaccines and oncology"
+    },
+    {
+      "ticker": "BIIB",
+      "name": "Biogen",
+      "cik": "0000875047",
+      "name_match": "biogen",
+      "region": "US",
+      "rationale": "Specialty biotechnology focused on neuroscience and rare disease"
+    },
+    {
+      "ticker": "ALNY",
+      "name": "Alnylam Pharmaceuticals",
+      "cik": "0001178670",
+      "name_match": "alnylam",
+      "region": "US",
+      "rationale": "RNAi platform and research-intensive commercial biotechnology"
+    }
+  ]
+}

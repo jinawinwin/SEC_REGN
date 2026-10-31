@@ -1,0 +1,102 @@
+name: Update Regeneron SEC data & deploy dashboard
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"   # 매월 1일 00:00 UTC (= 한국시간 09:00)
+  workflow_dispatch:       # Actions 탭에서 수동 실행
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "config/**"
+      - "docs/index.html"
+      - ".github/workflows/update.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sec-regn-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests and crawl SEC EDGAR
+        id: crawl
+        continue-on-error: true
+        shell: bash
+        env:
+          # Repository Settings > Secrets and variables > Actions > Secrets:
+          # Create SEC_USER_AGENT with a responsible name/service and a reachable email.
+          # Do not use a public Actions Variable for contact details in this public repository.
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          set -o pipefail
+          {
+            if [[ -z "${SEC_USER_AGENT:-}" ]]; then
+              echo "SEC_USER_AGENT secret is missing. Add it under Settings > Secrets and variables > Actions > Secrets."
+              echo "Use a responsible person/service name plus a reachable email address; email alone is insufficient."
+              exit 1
+            fi
+            if [[ "${SEC_USER_AGENT}" != *"@"* || "${SEC_USER_AGENT}" != *" "* ]]; then
+              echo "SEC_USER_AGENT must include an application/organization name followed by a reachable email address."
+              echo "Recommended format: SEC_REGN Dashboard contact@example.com"
+              exit 1
+            fi
+            python -m unittest discover -s tests -v && python scripts/fetch_sec.py
+          } 2>&1 | tee run.log
+
+      - name: Save failure log to repo
+        if: steps.crawl.outcome == 'failure'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p logs
+          { echo "run: ${GITHUB_RUN_NUMBER}  time: $(date -u +%FT%TZ)"; echo; tail -n 200 run.log; } > logs/last_failure.log
+          git add logs/last_failure.log
+          git commit -m "chore: save failure log of run ${GITHUB_RUN_NUMBER}"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "::error::Crawl failed - see logs/last_failure.log in the repository"
+          exit 1
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -q --ignore-unmatch logs/last_failure.log
+          git add -A data docs/data README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: monthly SEC data update ($(date -u +%F))"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
