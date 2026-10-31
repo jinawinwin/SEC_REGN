@@ -131,6 +131,13 @@ body.capturing #dock{display:none}
   .hero-r{text-align:left}
 }
 @media print{#dock,#busy{display:none!important} .tbl-wrap{max-height:none;overflow:visible} body{background:#fff}}
+
+.company-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;margin:12px 0 18px;padding:16px 20px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;box-shadow:var(--shadow)}
+.company-intro h2{font-size:14px;margin:0 0 5px;letter-spacing:-.01em}
+.company-intro p{font-size:13px;line-height:1.65;color:#465361;margin:0;max-width:950px}
+.company-tags{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.company-tags span{font-size:11px;color:#334b65;background:#edf5fc;border:1px solid #d8e8f7;border-radius:999px;padding:5px 9px;white-space:nowrap}
+@media(max-width:720px){.company-intro{grid-template-columns:1fr}.company-tags{justify-content:flex-start}}
 </style>
 </head>
 <body>
@@ -146,6 +153,12 @@ body.capturing #dock{display:none}
     </div>
     <div class="hero-r" id="hero-r">데이터를 불러오는 중…</div>
   </header>
+
+  <section class="company-intro pdf-block" aria-label="회사 소개">
+    <div><h2>회사 소개 · Regeneron Pharmaceuticals</h2>
+      <p>Regeneron은 미국의 바이오의약품 기업으로, 항체 기술과 유전학 기반 연구를 바탕으로 중증 질환 치료제를 발굴·개발·상용화합니다. 주요 연구·사업 분야는 안과, 면역·염증, 종양학 및 희귀질환이며, 제품 매출과 파트너십·협업 관련 수익이 재무성과에 함께 반영됩니다. 아래 지표는 SEC에 제출된 10-K·10-Q의 XBRL 데이터를 기준으로 회사의 매출, 수익성, 현금흐름 및 R&amp;D 투자 추이를 요약합니다.</p></div>
+    <div class="company-tags"><span>Biotechnology</span><span>Antibody research</span><span>R&amp;D-intensive</span><span>NASDAQ: REGN</span></div>
+  </section>
 
   <div id="app"></div>
 
