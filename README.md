@@ -12,7 +12,7 @@ SEC EDGAR에 공시된 Regeneron Pharmaceuticals, Inc. (NASDAQ: REGN, CIK 000087
 
 **대시보드:** https://jinawinwin.github.io/SEC_REGN/
 
-마지막 데이터 갱신: <!-- UPDATED:START -->최초 데이터 수집 후 자동 갱신<!-- UPDATED:END -->
+마지막 데이터 갱신: <!-- UPDATED:START -->2026-10-31 (latest 10-K/10-Q on file: 2026-10-30)<!-- UPDATED:END -->
 
 ## 대시보드 구성
 
@@ -63,8 +63,17 @@ Actions 탭의 **Update Regeneron SEC data & deploy dashboard → Run workflow**
 Peer 기업은 미국 상장 바이오·제약 기업으로 구성했습니다. 실제 SEC entityName이 설정된 CIK와 일치하는 경우에만 수집합니다.
 
 <!-- PEERS:START -->
-| Company | Ticker | Region | Why a peer |
-|---|---|---|---|
+| Company | Ticker | Region | Why a peer | FY end | Revenue (m) | Op. margin | Net margin | R&D / rev | CapEx / rev | Ccy |
+|---|---|---|---|---|---:|---:|---:|---:|---:|---|
+| **Regeneron** | REGN | US | Subject company (reference row) | 2025-12-31 | 14,343 | 24.9% | 31.4% | 40.8% | 6.3% | USD |
+| Amgen | AMGN | US | Large-cap biotechnology; biologics, oncology and inflammation | 2025-12-31 | 36,751 | 24.7% | 21.0% | 19.8% | 5.1% | USD |
+| Gilead Sciences | GILD | US | Antiviral franchises, oncology and cell therapy | 2025-12-31 | 29,443 | 34.0% | 28.9% | 19.7% | 1.9% | USD |
+| Vertex Pharmaceuticals | VRTX | US | Specialty biotech with commercial products and pipeline expansion | 2025-12-31 | 12,001 | 34.8% | 32.9% | 32.6% | 3.6% | USD |
+| AbbVie | ABBV | US | Immunology, oncology and large-scale pharmaceutical R&D | 2025-12-31 | 61,160 | 24.6% | 6.9% | 14.9% | 2.0% | USD |
+| Eli Lilly | LLY | US | Biopharma growth benchmark in cardiometabolic and oncology medicines | 2025-12-31 | 65,179 | — | 31.7% | 20.5% | — | USD |
+| Merck & Co. | MRK | US | Large-cap pharmaceutical company with oncology and vaccine franchises | 2025-12-31 | 65,011 | — | 28.1% | 24.3% | 6.3% | USD |
+| Pfizer | PFE | US | Global pharmaceutical scale, vaccines and oncology | 2025-12-31 | 62,579 | — | 12.4% | 16.7% | 4.2% | USD |
+| Alnylam Pharmaceuticals | ALNY | US | RNAi platform and research-intensive commercial biotechnology | 2025-12-31 | 3,714 | 13.5% | 8.4% | 35.5% | 1.6% | USD |
 <!-- PEERS:END -->
 
 비교 대상: Amgen, Gilead Sciences, Vertex Pharmaceuticals, AbbVie, Bristol Myers Squibb, Eli Lilly, Merck, Pfizer, Biogen, Alnylam Pharmaceuticals.
