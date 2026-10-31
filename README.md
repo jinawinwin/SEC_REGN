@@ -70,9 +70,11 @@ Peer 기업은 미국 상장 바이오·제약 기업으로 구성했습니다. 
 | Gilead Sciences | GILD | US | Antiviral franchises, oncology and cell therapy | 2025-12-31 | 29,443 | 34.0% | 28.9% | 19.7% | 1.9% | USD |
 | Vertex Pharmaceuticals | VRTX | US | Specialty biotech with commercial products and pipeline expansion | 2025-12-31 | 12,001 | 34.8% | 32.9% | 32.6% | 3.6% | USD |
 | AbbVie | ABBV | US | Immunology, oncology and large-scale pharmaceutical R&D | 2025-12-31 | 61,160 | 24.6% | 6.9% | 14.9% | 2.0% | USD |
+| Bristol Myers Squibb | BMY | US | Oncology, immunology and innovative medicines | 2025-12-31 | 48,194 | — | 14.6% | 20.6% | 2.7% | USD |
 | Eli Lilly | LLY | US | Biopharma growth benchmark in cardiometabolic and oncology medicines | 2025-12-31 | 65,179 | — | 31.7% | 20.5% | — | USD |
 | Merck & Co. | MRK | US | Large-cap pharmaceutical company with oncology and vaccine franchises | 2025-12-31 | 65,011 | — | 28.1% | 24.3% | 6.3% | USD |
 | Pfizer | PFE | US | Global pharmaceutical scale, vaccines and oncology | 2025-12-31 | 62,579 | — | 12.4% | 16.7% | 4.2% | USD |
+| Biogen | BIIB | US | Specialty biotechnology focused on neuroscience and rare disease | 2025-12-31 | 9,891 | — | 13.1% | 18.0% | 1.6% | USD |
 | Alnylam Pharmaceuticals | ALNY | US | RNAi platform and research-intensive commercial biotechnology | 2025-12-31 | 3,714 | 13.5% | 8.4% | 35.5% | 1.6% | USD |
 <!-- PEERS:END -->
 

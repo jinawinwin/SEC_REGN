@@ -7823,6 +7823,25 @@
    "fcf_margin": 29.13
   },
   {
+   "name": "Bristol Myers Squibb",
+   "ticker": "BMY",
+   "region": "US",
+   "rationale": "Oncology, immunology and innovative medicines",
+   "is_subject": false,
+   "currency": "USD",
+   "fy_end": "2025-12-31",
+   "fy_label": "FY2025",
+   "revenue": 48194.0,
+   "operating_income": null,
+   "net_income": 7054.0,
+   "total_assets": 90038.0,
+   "op_margin": null,
+   "net_margin": 14.64,
+   "rd_pct": 20.65,
+   "capex_pct": 2.72,
+   "fcf_margin": 26.65
+  },
+  {
    "name": "Eli Lilly",
    "ticker": "LLY",
    "region": "US",
@@ -7878,6 +7897,25 @@
    "rd_pct": 16.68,
    "capex_pct": 4.2,
    "fcf_margin": 14.5
+  },
+  {
+   "name": "Biogen",
+   "ticker": "BIIB",
+   "region": "US",
+   "rationale": "Specialty biotechnology focused on neuroscience and rare disease",
+   "is_subject": false,
+   "currency": "USD",
+   "fy_end": "2025-12-31",
+   "fy_label": "FY2025",
+   "revenue": 9890.6,
+   "operating_income": null,
+   "net_income": 1292.9,
+   "total_assets": 29439.5,
+   "op_margin": null,
+   "net_margin": 13.07,
+   "rd_pct": 17.98,
+   "capex_pct": 1.56,
+   "fcf_margin": 20.73
   },
   {
    "name": "Alnylam Pharmaceuticals",
