@@ -12,7 +12,7 @@ SEC EDGAR에 공시된 Regeneron Pharmaceuticals, Inc. (NASDAQ: REGN, CIK 000087
 
 **대시보드:** https://jinawinwin.github.io/SEC_REGN/
 
-마지막 데이터 갱신: <!-- UPDATED:START -->2026-10-31 (latest 10-K/10-Q on file: 2026-10-30)<!-- UPDATED:END -->
+마지막 데이터 갱신: <!-- UPDATED:START -->2026-11-01 (latest 10-K/10-Q on file: 2026-10-30)<!-- UPDATED:END -->
 
 ## 대시보드 구성
 
